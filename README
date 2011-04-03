@@ -1,0 +1,27 @@
+Sacrilicious was developed at the OER Hackdays, Manchester 2011.
+It was designed to provide a bookmarking service specifically relating to Open Educational Resources.
+
+Requirements - 
+
+The bookmarks are a derivative of django-basic-apps bookmarks, which is copyright 2008-2009, Nathan Borror
+https://github.com/nathanborror/django-basic-apps
+Our derived code is included in the main application
+See /basic/LICENSE for LICENSE Information pertaining to the bookmarks
+
+Authentication is through django-social-auth
+https://github.com/omab/django-social-auth
+$ pip install django-social-auth
+$ easy_install django-social-auth
+
+django-disqus
+https://github.com/arthurk/django-disqus
+
+django-tagging
+http://code.google.com/p/django-tagging/
+$ pip install django-tagging
+$ easy_install django-tagging
+
+The site was styled using Bluetrip
+http://http://bluetrip.org/
+
+
