@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+	
+<html lang="en">
+<head>
+    <title>OER Bookmarks</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="/media/styles/screen.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/media/styles/print.css" type="text/css" media="print" />
+  <!--[if IE]>
+    <link rel="stylesheet" href="/media/styles/ie.css" type="text/css" media="screen, projection" />
+  <![endif]-->
+  <link rel="stylesheet" href="/media/styles/style.css" type="text/css" media="screen, projection" />
+  
+</head>
+<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
+  <div id="body" class="container">
+    {% block body %}
+      <div class="span_24 content_title">
+          <h1 class="thin">Sacrilicious<span class="small" style="font-size:10pt;"><br/>OER Bookmarking</p></h1>
+          
+        {% block content_title %}{% endblock %}
+      </div>
+      <div class="content">
+        {% block content %}{% endblock %}
+        
+        <h4>Add Bookmarks via your browser</h4>
+        <p>	Add the following link to your browser's favourites/bookmarks to use this service</p>
+        <p>
+            <a href="javascript:load=function(){var script=document.createElement('script');script.setAttribute('type','text/javascript');script.setAttribute('src','http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js');if(typeof script!='undefined'){document.getElementsByTagName('head')[0].appendChild(script)}tryReady(0);};tryReady=function(time_elapsed){if(typeof $=='undefined'){if(time_elapsed<=5000){setTimeout('tryReady('+(time_elapsed+200)+')',200);}else{alert('Timed out while loading jQuery.');}}else{$(function(){var params='?url='+window.location;if($('a[rel*=license]').attr('href')){params+='&license='+$('a[rel*=license]').attr('href');}if($('title').html()){params+='&title='+$('title').html();}if($('meta[name=author]').attr('content')){params+='&author='+$('meta[name=author]').attr('content');}if($('meta[name*=publisher]').attr('content')){params+='&publisher='+$('meta[name*=publisher]').attr('content');}window.location='{{ request.META.HTTP_HOST }}/bookmarks/add/'+params;});}};load();">Bookmark it as OER</a>
+        </p>
+        
+      </div>
+    {% endblock %}
+  </div>
+</body>
+</html>

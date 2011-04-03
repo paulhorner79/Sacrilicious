@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% if request.user %}
+<div class="notice">
+        Hi {{request.user}}, would you like to view <a href="/bookmarks/"> your other bookmarks?</a>
+</div>   
+{% endif %}
+	<form method="post">
+		<table>
+			{{form}}
+			<tr>
+				<td><input type="submit" value="Save bookmark"/></td>
+			</tr>
+		</table>
+	</form>
+
+
+{% endblock %}	

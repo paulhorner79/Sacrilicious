@@ -1,0 +1,78 @@
+/*************************************
+   WELCOME TO THE CUSTOM STYLESHEET
+--------------------------------------
+              style.css
+        BlueTrip CSS Framework
+    Put your custom styles in here.
+***************************************/
+  body {
+  color: #111; font-family: Cambria, Georgia, "Times New Roman", times, serif; , background: #fff;
+  }
+  
+  .content_title {
+  background-image: url('http://openiconlibrary.sourceforge.net/gallery2/open_icon_library-full/icons/png/64x64/others/devil_bat.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: #efefef; 
+  opacity: 0.8, text-shadow 0 0 1px #222; 
+  border-radius:8px; 
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 5px;
+  margin: 0 0 12px;
+  min-height: 80px;
+  }
+  a.content_title {
+  
+  }
+  
+  .content_title h1 {
+  font-size: 2em;
+  margin-left: 2.5em;
+  }
+  
+  
+  .content {
+  
+  }
+/**************************************/
+/*           COLOR SCHEME             */
+/**************************************
+- black		#000
+- white		#fff
+-           #
+-           #
+-           #
+***************************************/
+.border {
+  border:#ccc 2px solid;
+  -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+  
+}
+/**************************************/
+/*              GLOBALS               */
+/**************************************/
+
+
+/**************************************/
+/*              HEADER                */
+/**************************************/
+
+
+
+/**************************************/
+/*             NAVIGATION             */
+/**************************************/
+
+
+
+/**************************************/
+/*            MAIN CONTENT            */
+/**************************************/
+
+
+
+/**************************************/
+/*               FOOTER               */
+/**************************************/
+img {border: 0; }

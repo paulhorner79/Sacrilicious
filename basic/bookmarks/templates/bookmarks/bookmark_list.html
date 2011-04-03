@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if request.user %}
+<div class="notice">
+	{% if view_all %}
+		Hi {{request.user}}, below is a list of all OER bookmarks. Want to view <a href="/bookmarks/">just your bookmarks?</a>
+	{% else %}
+		Hi {{request.user}}, below is a list of your OER bookmarks. Want to view <a href="/bookmarks/all/">other peoples bookmarks?</a>
+	{% endif %}
+	
+	{% if tag %}
+        <br/>Showing results tagged as <a href="/bookmarks/by_tag/{{tag.name}}/">{{tag.name}}</a>
+    {% endif %}
+	
+</div> 
+{% endif %}
+   
+
+
+
+{% if messages %}
+<div class="success">
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endif %}
+
+<ul>
+	{% for object in object_list %}
+		<li>{{object.title}}, <a href="{{object.get_absolute_url}}">info</a></li>
+	{% endfor %}
+</ul>
+
+
+<a href="/bookmarks/latest/feed/">Latest RSS</a> |
+<a href="/bookmarks/latest/user/{{request.user.username}}/feed/">Latest RSS (Your bookmarks)</a>
+
+{% endblock %}

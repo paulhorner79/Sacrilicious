@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if request.user %}
+<div class="notice">
+        Hi {{request.user}}, would you like to view <a href="/bookmarks/"> your other bookmarks?</a>
+</div>   
+{% endif %}
+{% load disqus_tags %}
+{% disqus_dev %}
+<h2>{{object.title}}</h2>
+<table>
+	<tr><td>Description</td><td>{{object.description}}</td></tr>
+	<tr><td>URL</td><td><a href="{{object_url}}">{{object.url}}</a></td></tr>
+	<tr><td>Publisher</td></td><td>{{object.publisher}}</td></tr>
+	<tr><td>Author</td><td>{{object.author}}</td></tr>
+	<tr><td>Date Added</td><td>{{object.created}}</td></tr>
+	<tr><td>Added By</td><td>{{object.user}}</td>
+	<tr>
+	    <td>tagged as</td>
+		<td>
+			{% for tag in object.tags %}
+				<a href="/bookmarks/by_tag/{{tag.name}}/">{{tag.name}}</a>,
+			{% endfor %}
+		</td>
+	</tr>
+</table>
+
+{% disqus_show_comments %}
+
+
+{% endblock %}
