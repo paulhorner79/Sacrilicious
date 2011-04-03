@@ -1,7 +1,20 @@
-Sacrilicious was developed at the OER Hackdays, Manchester 2011.
-It was designed to provide a bookmarking service specifically relating to Open Educational Resources.
+ABOUT 
 
-Requirements - 
+Sacrilicious was developed at the OER Hackdays, Manchester 2011.
+http://wiki.cetis.ac.uk/OER_Hack_Days
+
+This work was designed to provide a bookmarking service specifically relating to Open Educational Resources.  It's called sacrilicious because it's a bit like delicious - mmm sacrilicious - http://www.youtube.com/watch?v=UUnH9NECSUU
+
+The following functionality is available - 
+
+1. Bookmarklet that adds a bookmark to the database - picks up rel="license" from <a> tags, publisher and author from <meta> tags and the title from the page <title>
+2. Authentication is currently only through Twitter.  Which admittedly is a bit odd, but it worked for us on the day
+3. Tagging uses Django-tagging.  You can browse by tags.  It could do with having something that auto-populates tags.
+4. Comments through Django-Disqus.
+
+It's a good start given the time we had, but it needs further development
+
+REQUIREMENTS ETC - 
 
 The bookmarks are a derivative of django-basic-apps bookmarks, which is copyright 2008-2009, Nathan Borror
 https://github.com/nathanborror/django-basic-apps
@@ -23,5 +36,4 @@ $ easy_install django-tagging
 
 The site was styled using Bluetrip
 http://http://bluetrip.org/
-
 
