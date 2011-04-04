@@ -35,5 +35,5 @@ $ pip install django-tagging
 $ easy_install django-tagging
 
 The site was styled using Bluetrip
-http://http://bluetrip.org/
+http://bluetrip.org/
 
